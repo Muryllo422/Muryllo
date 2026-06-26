@@ -1,230 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Muryllo — Universo</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muryllo — Portal Literário</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body{
+  margin:0;
+  font-family: Arial;
+  background:#0a0b10;
+  color:white;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: #070812;
-  color: #eaeaea;
-  overflow-x: hidden;
+/* MENU */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(10,10,20,0.8);
+  backdrop-filter: blur(10px);
+  display:flex;
+  justify-content:center;
+  padding:15px;
+  gap:20px;
+  z-index:10;
 }
 
-/* FUNDO UNIVERSO */
-.bg {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at top, #1a1a2e, #070812);
-  z-index: -3;
+nav a{
+  color:#aaa;
+  text-decoration:none;
+  font-size:14px;
 }
 
-.particles {
-  position: fixed;
-  width: 200%;
-  height: 200%;
-  background-image: radial-gradient(#ffffff20 1px, transparent 1px);
-  background-size: 80px 80px;
-  animation: move 160s linear infinite;
-  opacity: 0.06;
-  z-index: -2;
-}
-
-@keyframes move {
-  from { transform: translateY(0); }
-  to { transform: translateY(-1200px); }
-}
-
-/* HEADER */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  backdrop-filter: blur(12px);
-  background: rgba(10,10,20,0.5);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  z-index: 10;
-}
-
-header h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 18px;
-  letter-spacing: 3px;
-}
-
-nav a {
-  margin-left: 15px;
-  color: #aaa;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-nav a:hover {
-  color: white;
-}
-
-/* HERO */
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-}
-
-.hero h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 60px;
-  letter-spacing: 6px;
-}
-
-.hero p {
-  margin-top: 15px;
-  max-width: 600px;
-  color: #aaa;
-}
+nav a:hover{ color:white; }
 
 /* SEÇÕES */
-.section {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 20px;
+section{
+  min-height:100vh;
+  padding:100px 20px;
+  display:flex;
+  justify-content:center;
 }
 
-.card {
-  max-width: 850px;
-  padding: 50px;
-  background: rgba(255,255,255,0.03);
-  border-left: 2px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
+/* CARD */
+.card{
+  max-width:800px;
+  border-left:2px solid #333;
+  padding:30px;
 }
 
-.card h2 {
-  font-family: 'Cinzel', serif;
-  margin-bottom: 20px;
+h1,h2{
+  font-family: Georgia;
 }
 
-.tag {
-  display: inline-block;
-  margin-bottom: 15px;
-  font-size: 12px;
-  color: #888;
-  letter-spacing: 2px;
+.poema{
+  white-space:pre-line;
+  line-height:1.9;
+  color:#ccc;
 }
 
-.poema {
-  white-space: pre-line;
-  line-height: 1.9;
-  color: #d0d0d0;
+.post p{
+  color:#bbb;
+  line-height:1.6;
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="bg"></div>
-<div class="particles"></div>
+<!-- MENU -->
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#poemas">Poemas</a>
+  <a href="#opiniao">Opiniões</a>
+</nav>
 
-<header>
-  <h1>Muryllo</h1>
-  <nav>
-    <a href="#inicio">Início</a>
-    <a href="#ciencia">Ciência</a>
-    <a href="#musica">Música</a>
-    <a href="#arte">Arte</a>
-    <a href="#filosofia">Filosofia</a>
-    <a href="#poemas">Poemas</a>
-  </nav>
-</header>
-
-<!-- HERO -->
-<div class="hero" id="inicio">
-  <div>
-    <h1>UNIVERSO</h1>
-    <p>Ciência, música, arte e filosofia em um só espaço — fragmentos de pensamento e emoção.</p>
-  </div>
-</div>
-
-<!-- CIÊNCIA -->
-<div class="section" id="ciencia">
+<!-- INÍCIO -->
+<section id="inicio">
   <div class="card">
-    <div class="tag">🔬 CIÊNCIA</div>
-    <h2>Ordem e Caos</h2>
-    <div class="poema">
-O universo se expande em silêncio,
-átomos dançam sem direção fixa,
-tudo que parece caos
-é apenas ordem ainda não compreendida.
-    </div>
+    <h1>MURY LLO</h1>
+    <p>Portal literário — poesia, pensamento e existência.</p>
   </div>
-</div>
+</section>
 
-<!-- MÚSICA -->
-<div class="section" id="musica">
+<!-- POEMAS -->
+<section id="poemas">
   <div class="card">
-    <div class="tag">🎵 MÚSICA</div>
-    <h2>Ritmo Invisível</h2>
-    <div class="poema">
-Tudo vibra em frequência,
-até o silêncio tem batida.
-O mundo é uma canção
-que ninguém terminou de ouvir.
-    </div>
-  </div>
-</div>
 
-<!-- ARTE -->
-<div class="section" id="arte">
-  <div class="card">
-    <div class="tag">🎨 ARTE</div>
-    <h2>Forma e Sentido</h2>
-    <div class="poema">
-Desenhar o invisível,
-dar corpo ao que sente,
-arte é traduzir o indizível
-em algo que respira na frente da gente.
-    </div>
-  </div>
-</div>
-
-<!-- FILOSOFIA -->
-<div class="section" id="filosofia">
-  <div class="card">
-    <div class="tag">🧠 FILOSOFIA</div>
-    <h2>Existir</h2>
-    <div class="poema">
-Se tudo muda,
-o que permanece?
-
-Talvez o olhar
-que tenta entender a mudança.
-    </div>
-  </div>
-</div>
-
-<!-- POEMAS REAIS -->
-<div class="section" id="poemas">
-  <div class="card">
-    <div class="tag">📖 POESIA</div>
     <h2>CONTA DA VIDA</h2>
+
     <div class="poema">
 Meu amigo, senta aqui, deixa eu falar,
 eu passei muitos anos sem saber caminhar,
@@ -237,34 +102,50 @@ Eu dizia: "quando sobrar dinheiro, eu vou",
 mas o futuro chegou e nada mudou.
 
 Existe uma conta maior, meu irmão,
-que não aparece no banco nem no cartão,
-mas cresce em silêncio dentro do coração.
+que cresce em silêncio dentro do coração.
 
 É a conta da vida.
     </div>
-  </div>
-</div>
 
-<div class="section">
-  <div class="card">
-    <div class="tag">📖 POESIA</div>
+    <hr style="border:0;border-top:1px solid #333;margin:30px 0;">
+
     <h2>VIDA LOUCA</h2>
+
     <div class="poema">
 A vida risca fósforos na ventania,
 e eu sigo aceso sem direção;
 cada esquina me devolve outra poesia,
 mas me deixa na estação.
 
-Já vi o riso naufragar na madrugada,
-feito barco de ferrugem no cais;
-vi a sorte bater leve, desavisada,
-e sumir no retrovisor, nunca mais.
-
 E no fim, quando a cidade apaga a luz do dia,
 eu percebo: é a vida que me leva a viver… pra me levar.
     </div>
+
   </div>
-</div>
+</section>
+
+<!-- OPINIÕES -->
+<section id="opiniao">
+  <div class="card">
+
+    <h2>OPINIÕES</h2>
+
+    <div class="post">
+      <h3>Sobre o tempo</h3>
+      <p>
+      A gente vive esperando o depois, mas o depois nunca chega inteiro.
+      </p>
+    </div>
+
+    <div class="post">
+      <h3>Sobre identidade</h3>
+      <p>
+      Você não é o que dizem de você. Você é o que continua sendo apesar disso.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 </body>
 </html>
