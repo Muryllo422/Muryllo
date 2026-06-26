@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muryllo — Portal Literário</title>
+<title>Muryllo — Portal</title>
 
 <style>
 body{
@@ -18,19 +18,19 @@ nav{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(10,10,20,0.8);
+  background:rgba(10,10,20,0.85);
   backdrop-filter: blur(10px);
   display:flex;
   justify-content:center;
-  padding:15px;
   gap:20px;
+  padding:15px;
   z-index:10;
 }
 
 nav a{
   color:#aaa;
   text-decoration:none;
-  font-size:14px;
+  font-size:13px;
 }
 
 nav a:hover{ color:white; }
@@ -38,31 +38,40 @@ nav a:hover{ color:white; }
 /* SEÇÕES */
 section{
   min-height:100vh;
-  padding:100px 20px;
+  padding:120px 20px;
   display:flex;
   justify-content:center;
 }
 
 /* CARD */
 .card{
-  max-width:800px;
+  max-width:850px;
   border-left:2px solid #333;
   padding:30px;
 }
 
 h1,h2{
   font-family: Georgia;
+  letter-spacing:1px;
 }
 
-.poema{
+.tag{
+  color:#777;
+  font-size:12px;
+  margin-bottom:10px;
+  letter-spacing:2px;
+}
+
+.texto{
   white-space:pre-line;
   line-height:1.9;
   color:#ccc;
 }
 
-.post p{
-  color:#bbb;
-  line-height:1.6;
+hr{
+  border:0;
+  border-top:1px solid #333;
+  margin:30px 0;
 }
 </style>
 </head>
@@ -72,76 +81,124 @@ h1,h2{
 <!-- MENU -->
 <nav>
   <a href="#inicio">Início</a>
-  <a href="#poemas">Poemas</a>
-  <a href="#opiniao">Opiniões</a>
+  <a href="#poema">Poemas</a>
+  <a href="#ciencia">Ciência</a>
 </nav>
 
 <!-- INÍCIO -->
 <section id="inicio">
   <div class="card">
     <h1>MURY LLO</h1>
-    <p>Portal literário — poesia, pensamento e existência.</p>
+    <p>Portal literário — poesia, ciência e consciência.</p>
   </div>
 </section>
 
 <!-- POEMAS -->
-<section id="poemas">
+<section id="poema">
   <div class="card">
 
-    <h2>CONTA DA VIDA</h2>
+    <div class="tag">POEMA</div>
+    <h2>CORAÇÃO SELVAGEM</h2>
 
-    <div class="poema">
-Meu amigo, senta aqui, deixa eu falar,
-eu passei muitos anos sem saber caminhar,
-vivendo sempre o amanhã, sem notar
-que o hoje morria devagar.
+    <div class="texto">
+Nasci na beira da estrada
+Sob sol de cobre e verão
+Trazia a alma inquietada
+Feito ave sem direção
 
-Eu dizia: "quando sobrar dinheiro, eu vou",
-"quando houver tempo, eu sou quem eu sou",
-"quando a vida acalmar, eu dou valor",
-mas o futuro chegou e nada mudou.
+O vento varria a campina
+Varando veredas sem fim
+Eu via a fumaça da usina
+Mas não alcançava a mim
 
-Existe uma conta maior, meu irmão,
-que cresce em silêncio dentro do coração.
+Na praça da velha cidade
+Sob luz cansada de abril
+Pregavam felicidade
+Nos lábios febris do Brasil
 
-É a conta da vida.
-    </div>
+Comprei tantas frases polidas
+Vestidas de voz professoral
+Mas eram miragens vendidas
+Na feira do bem e do mal
 
-    <hr style="border:0;border-top:1px solid #333;margin:30px 0;">
+A noite descia pesada
+Nos trilhos sem trem nem sinal
+E a lua surgia rachada
+No vidro de um bar marginal
 
-    <h2>VIDA LOUCA</h2>
+Então aconteceu o impossível
+Sem truque sem fé sem favor
+Vi um peixe azul invisível
+Cantando mais alto que a dor
 
-    <div class="poema">
-A vida risca fósforos na ventania,
-e eu sigo aceso sem direção;
-cada esquina me devolve outra poesia,
-mas me deixa na estação.
+Sorri daquela ironia
+Da vida virada ao revés
+Pois toda verdade que eu cria
+Trazia poeira nos pés
 
-E no fim, quando a cidade apaga a luz do dia,
-eu percebo: é a vida que me leva a viver… pra me levar.
+O Brasil passava nos olhos
+Do mangue ao sertão mineral
+E eu colecionava destroços
+Chamando de rumo afinal
+
+Ouvi retirantes e santos
+Camelôs marinheiros também
+Misturando risos e prantos
+Na mesma fumaça do trem
+
+Vi moças sonhando futuro
+Sob fios cortando o arrebol
+E homens falando do escuro
+Com sombras maiores que o sol
+
+Agora atravesso a fumaça
+Dos dias que o tempo bebeu
+Guardando no peito a cachaça
+Das noites que o mundo esqueceu
+
+E sei que não há cartilha
+Nem dono da noite ou do mar
+A estrada que em mim se partilha
+É a mesma que insiste em mudar
+
+Se existe um sentido escondido
+Debaixo do caos e da voz
+Talvez seja o grito contido
+De tudo que resta de nós
+
+Pastor de desejos dispersos
+De estrelas caídas ao léu
+De tudo que escapa dos versos
+E ainda procura seu céu
     </div>
 
   </div>
 </section>
 
-<!-- OPINIÕES -->
-<section id="opiniao">
+<!-- CIÊNCIA -->
+<section id="ciencia">
   <div class="card">
 
-    <h2>OPINIÕES</h2>
+    <div class="tag">CIÊNCIA</div>
+    <h2>Realidade, Tempo e Possibilidade</h2>
 
-    <div class="post">
-      <h3>Sobre o tempo</h3>
-      <p>
-      A gente vive esperando o depois, mas o depois nunca chega inteiro.
-      </p>
-    </div>
+    <div class="texto">
+Desde que comecei a pensar sobre a realidade, passei a percebê-la não como algo fixo, mas como um campo de possibilidades. Na física contemporânea, a matéria pode ser descrita matematicamente como uma função de onda, um conjunto de probabilidades. A partícula não é exatamente criada pela observação, mas sua descrição deixa de ser probabilística quando ocorre uma interação mensurável. Filosoficamente, isso me leva a pensar que, sem observação, não há forma definida, apenas potencial. Tudo é possibilidade antes de se manifestar.
 
-    <div class="post">
-      <h3>Sobre identidade</h3>
-      <p>
-      Você não é o que dizem de você. Você é o que continua sendo apesar disso.
-      </p>
+Assim como na caverna de Platão, aquilo que percebemos não é a realidade em si, mas sua aparência mediada. O mundo que vemos é sempre filtrado pelos sentidos, pela linguagem e pela consciência. Sem percepção, a realidade não desaparece, mas permanece inacessível, fluida, indefinida para nós, em espera.
+
+Isaac Newton foi um dos primeiros a demonstrar que a luz é condição essencial para o mundo visível. Ao estudar a decomposição da luz com o prisma e a fisiologia da visão, mostrou que cores e formas não são propriedades absolutas dos objetos, mas resultados da interação entre a luz e nossos sentidos. Ver não é tocar a realidade diretamente, mas receber estímulos luminosos que o cérebro interpreta como forma, cor e espaço.
+
+Com Einstein, essa compreensão se expandiu radicalmente. A luz deixou de ser apenas um fenômeno óptico e tornou-se um limite fundamental do universo. Nada transporta informação mais rápido do que ela. A relatividade mostrou que tempo e espaço não são absolutos, mas dependem do movimento e da gravidade.
+
+Daí nasce meu paradoxo do tempo: ele só ganha significado quando vivido. Existe como dimensão física, mas se torna experiência apenas na consciência.
+
+A física quântica aprofunda essa ideia: antes da medição, sistemas existem como superposições de possibilidades. A realidade percebida nasce do encontro entre o universo e a observação.
+
+Sem observação, tudo é possibilidade. Nós somos parte desse colapso de realidade em experiência.
+
+O universo é uma dança de probabilidades.
+A vida é o instante em que isso se torna consciência.
     </div>
 
   </div>
