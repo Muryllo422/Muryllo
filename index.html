@@ -1,136 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Muryllo</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Muryllo</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-    body {
-      background: #0a0a0f;
-      color: white;
-      min-height: 300vh;
-      overflow-x: hidden;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .bg {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at top, #1a1a2e, #0a0a0f);
-      z-index: -1;
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #06060b;
+  color: #eaeaea;
+  overflow-x: hidden;
+}
 
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(10,10,15,0.6);
-      backdrop-filter: blur(10px);
-    }
+/* fundo */
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top, #1a1a2e, #06060b);
+  z-index: -3;
+}
 
-    header h1 {
-      font-size: 18px;
-      letter-spacing: 2px;
-    }
+.stars {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 90px 90px;
+  opacity: 0.06;
+  animation: move 140s linear infinite;
+  z-index: -2;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      opacity: 0.7;
-    }
+@keyframes move {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1200px); }
+}
 
-    nav a:hover {
-      opacity: 1;
-    }
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(14px);
+  background: rgba(10,10,18,0.4);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  z-index: 10;
+}
 
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
+header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  letter-spacing: 4px;
+}
 
-    .hero h1 {
-      font-size: 52px;
-      letter-spacing: 3px;
-    }
+nav a {
+  margin-left: 20px;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
 
-    .hero p {
-      margin-top: 15px;
-      max-width: 500px;
-      opacity: 0.7;
-      line-height: 1.6;
-    }
+nav a:hover {
+  color: white;
+}
 
-    button {
-      margin-top: 25px;
-      padding: 12px 24px;
-      border: 1px solid white;
-      background: transparent;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+/* hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+}
 
-    button:hover {
-      background: white;
-      color: black;
-    }
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 70px;
+  letter-spacing: 8px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
 
-    .conteudo {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 40px;
-    }
+.hero p {
+  margin-top: 20px;
+  max-width: 600px;
+  color: #aaa;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  animation-delay: 1s;
+}
 
-    .poema {
-      max-width: 750px;
-      white-space: pre-line;
-      line-height: 1.8;
-      opacity: 0.85;
-      text-align: left;
-    }
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
 
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 36px;
-      }
-    }
-  </style>
+button {
+  margin-top: 30px;
+  padding: 12px 30px;
+  border: 1px solid #555;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+/* seções */
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.card {
+  max-width: 850px;
+  background: rgba(255,255,255,0.03);
+  border-left: 2px solid rgba(255,255,255,0.08);
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.card h2 {
+  font-family: 'Cinzel', serif;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+}
+
+.poema {
+  white-space: pre-line;
+  line-height: 1.9;
+  color: #cfcfcf;
+  font-size: 15px;
+}
+
+.music {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* responsivo */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  header {
+    padding: 20px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="bg"></div>
+<div class="bg"></div>
+<div class="stars"></div>
 
-  <header>
-    <h1>Muryllo</h1>
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#poemas">Poemas</a>
-    </nav>
-  </header>
+<header>
+  <h1>Muryllo</h1>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#poemas">Poemas</a>
+    <a href="#musicas">Músicas</a>
+  </nav>
+</header>
 
-  <div class="hero" id="inicio">
+<div class="hero" id="inicio">
+  <div>
     <h1>Muryllo</h1>
     <p>Um universo em construção — poesia, arte e identidade.</p>
 
@@ -138,12 +198,14 @@
       Explorar
     </button>
   </div>
+</div>
 
-  <div class="conteudo" id="poemas">
+<!-- POEMAS -->
+<div class="section" id="poemas">
+  <div class="card">
+    <h2>CORAÇÃO SELVAGEM</h2>
+
     <div class="poema">
-
-CORAÇÃO SELVAGEM  
-
 Nasci na beira da estrada  
 Sob sol de cobre e verão  
 Trazia a alma inquietada  
@@ -159,64 +221,25 @@ Sob luz cansada de abril
 Pregavam felicidade  
 Nos lábios febris do Brasil  
 
-Comprei tantas frases polidas  
-Vestidas de voz professoral  
-Mas eram miragens vendidas  
-Na feira do bem e do mal  
-
-A noite descia pesada  
-Nos trilhos sem trem nem sinal  
-E a lua surgia rachada  
-No vidro de um bar marginal  
-
-Então aconteceu o impossível  
-Sem truque sem fé sem favor  
-Vi um peixe azul invisível  
-Cantando mais alto que a dor  
-
-Sorri daquela ironia  
-Da vida virada ao revés  
-Pois toda verdade que eu cria  
-Trazia poeira nos pés  
-
-O Brasil passava nos olhos  
-Do mangue ao sertão mineral  
-E eu colecionava destroços  
-Chamando de rumo afinal  
-
-Ouvi retirantes e santos  
-Camelôs marinheiros também  
-Misturando risos e prantos  
-Na mesma fumaça do trem  
-
-Vi moças sonhando futuro  
-Sob fios cortando o arrebol  
-E homens falando do escuro  
-Com sombras maiores que o sol  
-
-Agora atravesso a fumaça  
-Dos dias que o tempo bebeu  
-Guardando no peito a cachaça  
-Das noites que o mundo esqueceu  
-
-E sei que não há cartilha  
-Nem dono da noite ou do mar  
-A estrada que em mim se partilha  
-É a mesma que insiste em mudar  
-
 Se existe um sentido escondido  
-Debaixo do caos e da voz  
 Talvez seja o grito contido  
 De tudo que resta de nós  
-
-Pastor de desejos dispersos  
-De estrelas caídas ao léu  
-De tudo que escapa dos versos  
-E ainda procura seu céu  
-
     </div>
   </div>
+</div>
+
+<!-- MÚSICAS -->
+<div class="section" id="musicas">
+  <div class="card">
+    <h2>MÚSICAS</h2>
+    <p class="music">
+Aqui nascem ideias de canções.
+
+Fragmentos de melodia ainda não gravada,
+entre o silêncio e o caos.
+    </p>
+  </div>
+</div>
 
 </body>
 </html>
-      
