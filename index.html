@@ -16,8 +16,8 @@
     body {
       background: #0a0a0f;
       color: white;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 200vh; /* permite scroll */
+      overflow-x: hidden;
     }
 
     .bg {
@@ -28,6 +28,34 @@
       z-index: -1;
     }
 
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10,10,15,0.6);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      opacity: 0.7;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
     .hero {
       height: 100vh;
       display: flex;
@@ -35,6 +63,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 20px;
     }
 
     h1 {
@@ -56,11 +85,28 @@
       background: transparent;
       color: white;
       cursor: pointer;
+      transition: 0.3s;
     }
 
     button:hover {
       background: white;
       color: black;
+    }
+
+    /* seção abaixo pra onde vai o scroll */
+    .conteudo {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
     }
   </style>
 </head>
@@ -69,10 +115,30 @@
 
   <div class="bg"></div>
 
-  <div class="hero">
+  <header>
     <h1>Muryllo</h1>
-    <p>Um universo em construção — poesia, arte e identidade.</p>
-    <button>Explorar</button>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Poemas</a>
+      <a href="#">Músicas</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="inicio">
+    <h1>Muryllo</h1>
+    <p>
+      Um universo em construção — poesia, arte e identidade.
+      Aqui nascem ideias, sentimentos e fragmentos de vida.
+    </p>
+
+    <button onclick="document.getElementById('secao').scrollIntoView({behavior:'smooth'})">
+      Explorar
+    </button>
+  </div>
+
+  <div class="conteudo" id="secao">
+    ✨ Aqui começa o seu universo artístico
   </div>
 
 </body>
