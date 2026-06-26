@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Muryllo — Livro</title>
+<title>Muryllo — Universo</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -16,29 +16,29 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #0a0b10;
+  background: #070812;
   color: #eaeaea;
-  line-height: 1.8;
+  overflow-x: hidden;
 }
 
-/* fundo */
+/* FUNDO UNIVERSO */
 .bg {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at top, #1a1a2e, #0a0b10);
-  z-index: -2;
+  background: radial-gradient(circle at top, #1a1a2e, #070812);
+  z-index: -3;
 }
 
-.stars {
+.particles {
   position: fixed;
   width: 200%;
   height: 200%;
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 90px 90px;
-  opacity: 0.05;
-  animation: move 140s linear infinite;
-  z-index: -1;
+  background-image: radial-gradient(#ffffff20 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: move 160s linear infinite;
+  opacity: 0.06;
+  z-index: -2;
 }
 
 @keyframes move {
@@ -46,64 +46,60 @@ body {
   to { transform: translateY(-1200px); }
 }
 
-/* NAV */
-nav {
+/* HEADER */
+header {
   position: fixed;
-  top: 20px;
-  right: 30px;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(12px);
+  background: rgba(10,10,20,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
   z-index: 10;
 }
 
+header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
 nav a {
-  color: #aaa;
   margin-left: 15px;
-  font-size: 12px;
+  color: #aaa;
   text-decoration: none;
+  font-size: 12px;
 }
 
 nav a:hover {
   color: white;
 }
 
-/* CAPA */
-.cover {
+/* HERO */
+.hero {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  flex-direction: column;
 }
 
-.cover h1 {
+.hero h1 {
   font-family: 'Cinzel', serif;
-  font-size: 70px;
-  letter-spacing: 8px;
+  font-size: 60px;
+  letter-spacing: 6px;
 }
 
-.cover p {
-  margin-top: 20px;
+.hero p {
+  margin-top: 15px;
   max-width: 600px;
   color: #aaa;
 }
 
-button {
-  margin-top: 30px;
-  padding: 12px 30px;
-  border: 1px solid #444;
-  background: transparent;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-  letter-spacing: 2px;
-}
-
-button:hover {
-  background: white;
-  color: black;
-}
-
-/* SUMÁRIO */
+/* SEÇÕES */
 .section {
   min-height: 100vh;
   display: flex;
@@ -113,10 +109,10 @@ button:hover {
 }
 
 .card {
-  max-width: 800px;
+  max-width: 850px;
+  padding: 50px;
   background: rgba(255,255,255,0.03);
   border-left: 2px solid rgba(255,255,255,0.08);
-  padding: 50px;
   backdrop-filter: blur(10px);
 }
 
@@ -125,112 +121,146 @@ button:hover {
   margin-bottom: 20px;
 }
 
-/* CAPÍTULOS */
-.chapter {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 20px;
+.tag {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 2px;
 }
 
-.page {
-  max-width: 800px;
-  padding: 50px;
-  background: rgba(255,255,255,0.02);
-  border-left: 2px solid rgba(255,255,255,0.08);
-}
-
-.page h2 {
-  font-family: 'Cinzel', serif;
-  margin-bottom: 25px;
-}
-
-.poem {
+.poema {
   white-space: pre-line;
-  color: #cfcfcf;
+  line-height: 1.9;
+  color: #d0d0d0;
 }
 
-/* RESPONSIVO */
-@media (max-width: 600px) {
-  .cover h1 {
-    font-size: 38px;
-  }
-
-  .page, .card {
-    padding: 25px;
-  }
-}
 </style>
 </head>
 
 <body>
 
 <div class="bg"></div>
-<div class="stars"></div>
+<div class="particles"></div>
 
-<nav>
-  <a href="#capa">Capa</a>
-  <a href="#indice">Índice</a>
-  <a href="#cap1">Capítulo I</a>
-  <a href="#cap2">Capítulo II</a>
-</nav>
+<header>
+  <h1>Muryllo</h1>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#ciencia">Ciência</a>
+    <a href="#musica">Música</a>
+    <a href="#arte">Arte</a>
+    <a href="#filosofia">Filosofia</a>
+    <a href="#poemas">Poemas</a>
+  </nav>
+</header>
 
-<!-- CAPA -->
-<div class="cover" id="capa">
+<!-- HERO -->
+<div class="hero" id="inicio">
   <div>
-    <h1>MURYLLO</h1>
-    <p>Um livro de poesia e existência — onde a vida escreve junto com a palavra.</p>
-
-    <button onclick="document.getElementById('indice').scrollIntoView({behavior:'smooth'})">
-      Abrir livro
-    </button>
+    <h1>UNIVERSO</h1>
+    <p>Ciência, música, arte e filosofia em um só espaço — fragmentos de pensamento e emoção.</p>
   </div>
 </div>
 
-<!-- ÍNDICE -->
-<div class="section" id="indice">
+<!-- CIÊNCIA -->
+<div class="section" id="ciencia">
   <div class="card">
-    <h2>ÍNDICE</h2>
-    <p>
-      <a href="#cap1" style="color:#aaa;">Capítulo I — Conta da Vida</a><br><br>
-      <a href="#cap2" style="color:#aaa;">Capítulo II — Vida Louca</a>
-    </p>
+    <div class="tag">🔬 CIÊNCIA</div>
+    <h2>Ordem e Caos</h2>
+    <div class="poema">
+O universo se expande em silêncio,
+átomos dançam sem direção fixa,
+tudo que parece caos
+é apenas ordem ainda não compreendida.
+    </div>
   </div>
 </div>
 
-<!-- CAPÍTULO 1 -->
-<div class="chapter" id="cap1">
-  <div class="page">
-    <h2>CAPÍTULO I — CONTA DA VIDA</h2>
+<!-- MÚSICA -->
+<div class="section" id="musica">
+  <div class="card">
+    <div class="tag">🎵 MÚSICA</div>
+    <h2>Ritmo Invisível</h2>
+    <div class="poema">
+Tudo vibra em frequência,
+até o silêncio tem batida.
+O mundo é uma canção
+que ninguém terminou de ouvir.
+    </div>
+  </div>
+</div>
 
-    <div class="poem">
-Meu amigo, senta aqui, deixa eu falar,  
-eu passei muitos anos sem saber caminhar,  
-vivendo sempre o amanhã, sem notar  
-que o hoje morria devagar.  
+<!-- ARTE -->
+<div class="section" id="arte">
+  <div class="card">
+    <div class="tag">🎨 ARTE</div>
+    <h2>Forma e Sentido</h2>
+    <div class="poema">
+Desenhar o invisível,
+dar corpo ao que sente,
+arte é traduzir o indizível
+em algo que respira na frente da gente.
+    </div>
+  </div>
+</div>
 
-Existe uma conta maior, meu irmão,  
-que não aparece no banco nem no cartão,  
-mas cresce em silêncio dentro do coração.  
+<!-- FILOSOFIA -->
+<div class="section" id="filosofia">
+  <div class="card">
+    <div class="tag">🧠 FILOSOFIA</div>
+    <h2>Existir</h2>
+    <div class="poema">
+Se tudo muda,
+o que permanece?
+
+Talvez o olhar
+que tenta entender a mudança.
+    </div>
+  </div>
+</div>
+
+<!-- POEMAS REAIS -->
+<div class="section" id="poemas">
+  <div class="card">
+    <div class="tag">📖 POESIA</div>
+    <h2>CONTA DA VIDA</h2>
+    <div class="poema">
+Meu amigo, senta aqui, deixa eu falar,
+eu passei muitos anos sem saber caminhar,
+vivendo sempre o amanhã, sem notar
+que o hoje morria devagar.
+
+Eu dizia: "quando sobrar dinheiro, eu vou",
+"quando houver tempo, eu sou quem eu sou",
+"quando a vida acalmar, eu dou valor",
+mas o futuro chegou e nada mudou.
+
+Existe uma conta maior, meu irmão,
+que não aparece no banco nem no cartão,
+mas cresce em silêncio dentro do coração.
 
 É a conta da vida.
     </div>
   </div>
 </div>
 
-<!-- CAPÍTULO 2 -->
-<div class="chapter" id="cap2">
-  <div class="page">
-    <h2>CAPÍTULO II — VIDA LOUCA</h2>
+<div class="section">
+  <div class="card">
+    <div class="tag">📖 POESIA</div>
+    <h2>VIDA LOUCA</h2>
+    <div class="poema">
+A vida risca fósforos na ventania,
+e eu sigo aceso sem direção;
+cada esquina me devolve outra poesia,
+mas me deixa na estação.
 
-    <div class="poem">
-A vida risca fósforos na ventania,  
-e eu sigo aceso sem direção;  
-cada esquina me devolve outra poesia,  
-mas me deixa na estação.  
+Já vi o riso naufragar na madrugada,
+feito barco de ferrugem no cais;
+vi a sorte bater leve, desavisada,
+e sumir no retrovisor, nunca mais.
 
-E no fim, quando a cidade apaga a luz do dia,  
+E no fim, quando a cidade apaga a luz do dia,
 eu percebo: é a vida que me leva a viver… pra me levar.
     </div>
   </div>
