@@ -16,7 +16,7 @@
     body {
       background: #0a0a0f;
       color: white;
-      min-height: 200vh;
+      min-height: 300vh;
       overflow-x: hidden;
     }
 
@@ -66,12 +66,12 @@
       padding: 20px;
     }
 
-    h1 {
+    .hero h1 {
       font-size: 52px;
       letter-spacing: 3px;
     }
 
-    p {
+    .hero p {
       margin-top: 15px;
       max-width: 500px;
       opacity: 0.7;
@@ -94,26 +94,24 @@
     }
 
     .conteudo {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 20px;
+      padding: 40px;
     }
 
-    .conteudo h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-
-    .conteudo p {
-      opacity: 0.7;
-      line-height: 1.6;
+    .poema {
+      max-width: 750px;
+      white-space: pre-line;
+      line-height: 1.8;
+      opacity: 0.85;
+      text-align: left;
     }
 
     @media (max-width: 600px) {
-      h1 {
+      .hero h1 {
         font-size: 36px;
       }
     }
@@ -127,38 +125,98 @@
   <header>
     <h1>Muryllo</h1>
     <nav>
-      <a href="#">Início</a>
-      <a href="#">Poemas</a>
-      <a href="#">Músicas</a>
-      <a href="#">Contato</a>
+      <a href="#inicio">Início</a>
+      <a href="#poemas">Poemas</a>
     </nav>
   </header>
 
   <div class="hero" id="inicio">
     <h1>Muryllo</h1>
-    <p>
-      Um universo em construção — poesia, arte e identidade.
-      Aqui nascem ideias, sentimentos e fragmentos de vida.
-    </p>
+    <p>Um universo em construção — poesia, arte e identidade.</p>
 
-    <button onclick="document.getElementById('secao').scrollIntoView({behavior:'smooth'})">
+    <button onclick="document.getElementById('poemas').scrollIntoView({behavior:'smooth'})">
       Explorar
     </button>
   </div>
 
-  <div class="conteudo" id="secao">
-    <div>
-      <h2>Poemas em construção</h2>
-      <p>
-        Aqui não existem respostas prontas. Só fragmentos de sentimentos,
-        memórias quebradas e palavras tentando virar música.
-      </p>
+  <div class="conteudo" id="poemas">
+    <div class="poema">
 
-      <p style="margin-top:20px; opacity:0.5;">
-        “A arte começa onde o silêncio incomoda.”
-      </p>
+CORAÇÃO SELVAGEM  
+
+Nasci na beira da estrada  
+Sob sol de cobre e verão  
+Trazia a alma inquietada  
+Feito ave sem direção  
+
+O vento varria a campina  
+Varando veredas sem fim  
+Eu via a fumaça da usina  
+Mas não alcançava a mim  
+
+Na praça da velha cidade  
+Sob luz cansada de abril  
+Pregavam felicidade  
+Nos lábios febris do Brasil  
+
+Comprei tantas frases polidas  
+Vestidas de voz professoral  
+Mas eram miragens vendidas  
+Na feira do bem e do mal  
+
+A noite descia pesada  
+Nos trilhos sem trem nem sinal  
+E a lua surgia rachada  
+No vidro de um bar marginal  
+
+Então aconteceu o impossível  
+Sem truque sem fé sem favor  
+Vi um peixe azul invisível  
+Cantando mais alto que a dor  
+
+Sorri daquela ironia  
+Da vida virada ao revés  
+Pois toda verdade que eu cria  
+Trazia poeira nos pés  
+
+O Brasil passava nos olhos  
+Do mangue ao sertão mineral  
+E eu colecionava destroços  
+Chamando de rumo afinal  
+
+Ouvi retirantes e santos  
+Camelôs marinheiros também  
+Misturando risos e prantos  
+Na mesma fumaça do trem  
+
+Vi moças sonhando futuro  
+Sob fios cortando o arrebol  
+E homens falando do escuro  
+Com sombras maiores que o sol  
+
+Agora atravesso a fumaça  
+Dos dias que o tempo bebeu  
+Guardando no peito a cachaça  
+Das noites que o mundo esqueceu  
+
+E sei que não há cartilha  
+Nem dono da noite ou do mar  
+A estrada que em mim se partilha  
+É a mesma que insiste em mudar  
+
+Se existe um sentido escondido  
+Debaixo do caos e da voz  
+Talvez seja o grito contido  
+De tudo que resta de nós  
+
+Pastor de desejos dispersos  
+De estrelas caídas ao léu  
+De tudo que escapa dos versos  
+E ainda procura seu céu  
+
     </div>
   </div>
 
 </body>
 </html>
+      
